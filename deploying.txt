@@ -1,0 +1,39 @@
+deploying significa running the server, your app en algun lado, server de otro o en tu server 24/7
+
+
+
+heroku login
+
+usar git pero ojo son en la carpeta del proyecto
+
+//entonces inicializarlo
+
+git init
+
+usar app.listen(process.env.PORT, process.env.IP // en el app.js
+
+y ahora agregamos todos los archivos y carpeta
+eje
+
+git add app.js
+despues
+git commit -m "initial command"
+
+desp
+
+heroku create
+
+git remote -v
+git push heroku master // que abarque todo el proyecto de la carpeta
+"start": "node app.js"  // dentro del archivo package.json y dentro del script
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+
+heroku logs // para ver los errores de la pagina
+//tambien se puede ejecutar comandos a distancia remota
+ej
+heroku run ls
+heroku run ls routes // la carpeta
+heroku run npm install mongoose --save //instala remotamente si falta
