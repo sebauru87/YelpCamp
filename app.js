@@ -33,10 +33,8 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-
-//mongoose.connect("mongodb://localhost:27017/yelp_campV8", { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect("mongodb+srv://sebauru87:filosofia@yelpcamp-ijcji.mongodb.net/test?retryWrites=true&w=majority", {
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_campV8";
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 	useCreateIndex: true
@@ -45,6 +43,7 @@ mongoose.connect("mongodb+srv://sebauru87:filosofia@yelpcamp-ijcji.mongodb.net/t
 }).catch(err => {
 	console.log('ERROR:', err.message);
 });
+
 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
