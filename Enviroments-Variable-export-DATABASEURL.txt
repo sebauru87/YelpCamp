@@ -2,6 +2,7 @@ Enviroments Variables
 el entorno donde se corre la pagina y la base de datos, ej en heroku o localhost
 asi tenemos 2 bases de datos diferentes
 tambien sirve para que la gente no sepa el codigo de nuestra base de datos, sea invisible, que solo se vea DATABASEURL
+tambien ayuda tener un default value
 
 //in the command line
 export DATABASEURL=mongodb://localhost:27017/yelp_campV8
